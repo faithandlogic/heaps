@@ -1,9 +1,14 @@
-package main
+package heaps
 
 import "fmt"
 
 type MaxHeap struct {
 	array []int
+}
+
+func Make_Heap() MaxHeap {
+    var myheap MaxHeap = MaxHeap{}
+    return myheap
 }
 
 func (heap *MaxHeap) Insert(data int) {
@@ -69,18 +74,3 @@ func (heap *MaxHeap) restore(index int) {
 	} 
 }
 
-func main() {
-	println("Heaps")
-
-	heap := &MaxHeap{}
-	buildHeap := []int{12,22,32,5,3,7,2,23,44,32,11}
-	for _, v := range buildHeap {
-		heap.Insert(v)
-	}
-	fmt.Println(heap)
-	for i := 0; i < 5; i++ {
-		heap.Remove()
-	}
-	fmt.Println(heap)
-
-}
