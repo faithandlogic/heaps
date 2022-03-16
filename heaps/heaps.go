@@ -74,3 +74,9 @@ func (heap *MaxHeap) restore(index int) {
 	} 
 }
 
+func (heap *MaxHeap) Print_Heap() {
+	for _, v := range heap.array {
+		fmt.Print(v," ")
+	}
+	fmt.Println()
+}
