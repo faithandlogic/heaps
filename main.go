@@ -2,7 +2,6 @@ package main
 
 import (
 	"heaps/heaps"
-	"fmt"
 )
 
 func main() {
@@ -13,10 +12,10 @@ func main() {
 	for _, v := range buildHeap {
 		heap.Insert(v)
 	}
-	fmt.Println(heap)
+	heap.Print_Heap()
 	for i := 0; i < 5; i++ {
 		heap.Remove()
 	}
-	fmt.Println(heap)
+	heap.Print_Heap()
 
 }
